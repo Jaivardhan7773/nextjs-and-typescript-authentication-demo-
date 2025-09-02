@@ -76,7 +76,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white placeholder-gray-500 outline outline-1 outline-white/10 focus:outline-2 focus:outline-indigo-500 sm:text-sm"
+                className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white placeholder-gray-500  outline-1 outline-white/10 focus:outline-2 focus:outline-indigo-500 sm:text-sm"
               />
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white placeholder-gray-500 outline outline-1 outline-white/10 focus:outline-2 focus:outline-indigo-500 sm:text-sm"
+                className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white placeholder-gray-500  outline-1 outline-white/10 focus:outline-2 focus:outline-indigo-500 sm:text-sm"
               />
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function LoginPage() {
             <button
               disabled={loading}
               type="submit"
-              className="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm font-semibold text-white hover:bg-indigo-800 focus:outline focus:outline-2 focus:outline-indigo-500"
+              className="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm font-semibold text-white hover:bg-indigo-800  focus:outline-2 focus:outline-indigo-500"
             >
               {loading ? 'Logging in...' : 'Login'}
             </button>
