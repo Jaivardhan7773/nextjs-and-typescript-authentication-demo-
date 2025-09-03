@@ -7,7 +7,7 @@ import { useAuthStore } from "./lib/store";
 export default function Home() {
   const router = useRouter();
 
-  const {user} = useAuthStore()
+  const { user } = useAuthStore()
 
 
   useEffect(() => {
@@ -20,102 +20,79 @@ export default function Home() {
 
 
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <div className="font-sans text-gray-900">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-800 to-indigo-950 text-white py-20 px-6 text-center">
+          <h1 className="text-5xl font-bold mb-4">Welcome to Your Next Big Project</h1>
+          <p className="text-xl max-w-3xl mx-auto mb-8 ">Build beautiful, blazing-fast apps with modern tools and a great developer experience.</p>
+          <button className="bg-white text-blue-700 rounded-lg px-6 py-3 font-semibold hover:bg-gray-100 transition cursor-pointer">Get Started</button>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-6 mx-5 bg-gradient-to-r from-emerald-900 to-emerald-500 rounded-lg my-5 text-amber-50">
+          <h2 className="text-4xl font-bold mb-12 text-center">Features You'll Love</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="p-6 shadow-lg rounded-xl hover:shadow-2xl transition">
+              <h3 className="text-2xl font-semibold mb-3">Fast Performance</h3>
+              <p>Optimized rendering and lightning-fast build times let you focus on what matters.</p>
+            </div>
+            <div className="p-6 shadow-lg rounded-xl hover:shadow-2xl transition">
+              <h3 className="text-2xl font-semibold mb-3">Developer Friendly</h3>
+              <p>Enjoy top-tier tooling, hot reloading, and rich plugin ecosystem for productivity.</p>
+            </div>
+            <div className="p-6 shadow-lg rounded-xl hover:shadow-2xl transition">
+              <h3 className="text-2xl font-semibold mb-3">Flexible Styling</h3>
+              <p>Use Tailwind CSS to rapidly design visually stunning interfaces with utility-first classes.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="bg-gradient-to-l from-violet-500 to-blue-500 py-20 px-6  mx-5 rounded-lg shadow-lg">
+          <h2 className="text-4xl font-bold mb-6 text-center">About This Demo</h2>
+          <p className="text-lg leading-relaxed mb-4">
+            This demo landing page is built with modern React using Vite bundler and styled using Tailwind CSS. It showcases how to structure sections for a powerful frontend experience with minimal code.
+          </p>
+          <p className="text-lg leading-relaxed">
+            Tailwind's utility-first approach allows for speedy development without sacrificing design quality. This example includes hero banners, feature highlights, about sections, testimonials, and more.
+          </p>
+        </section>
+
+
+        <section className="py-20 px-6 max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-amber-50 mb-12 text-center">What People Are Saying</h2>
+          <div className="grid gap-12 md:grid-cols-3">
+            <div className="border border-gray-300 rounded-lg p-8 shadow-sm hover:shadow-lg transition">
+              <p className="italic mb-4 text-amber-50">"This toolset transformed our web app development cycle and improved delivery by leaps!"</p>
+              <h4 className="font-semibold text-amber-50">Alexa R.</h4>
+              <span className=" text-amber-50">Frontend Developer</span>
+            </div>
+            <div className="border border-gray-300 rounded-lg p-8 shadow-sm hover:shadow-lg transition">
+              <p className="italic mb-4 text-amber-50">"Tailwind + Vite = Perfect for rapid prototyping and scalable solutions."</p>
+              <h4 className="font-semibold text-amber-50">John M.</h4>
+              <span className="text-amber-50">Fullstack Engineer</span>
+            </div>
+            <div className="border border-gray-300 rounded-lg p-8 shadow-sm hover:shadow-lg transition">
+              <p className="italic mb-4 text-amber-50">"I love the blazing fast builds and the modular CSS approach."</p>
+              <h4 className="font-semibold text-amber-50">Samantha L.</h4>
+              <span className="text-amber-50">Product Manager</span>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-violet-500 text-white py-20 px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to build your app?</h2>
+          <button className="bg-white cursor-pointer text-blue-700 px-8 py-4 rounded-full text-xl font-semibold hover:bg-amber-100 transition-colors">Start Your Journey</button>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-gray-950 text-gray-200 text-center py-1">
+          <p>© 2025 Jaivardhan singh All rights reserved</p>
+        </footer>
+      </div>
+    </>
   );
 }

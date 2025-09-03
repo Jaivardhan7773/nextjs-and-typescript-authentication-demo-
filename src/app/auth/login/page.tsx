@@ -1,5 +1,6 @@
 'use client';
 
+import { toast } from "sonner";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axiosInstance from '@/app/lib/api';
@@ -26,8 +27,7 @@ export default function LoginPage() {
 
       // save user globally in store
       setUser(res.data.user);
-
-
+      toast.success("Login successfull");
       router.push('/'); // redirect home
     } catch (err: any) {
       const backendData = err.response?.data;
@@ -42,6 +42,7 @@ export default function LoginPage() {
       }
 
       setError(errorMessage);
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -76,6 +77,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                autoComplete="none"
                 className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white placeholder-gray-500  outline-1 outline-white/10 focus:outline-2 focus:outline-indigo-500 sm:text-sm"
               />
             </div>
@@ -115,7 +117,7 @@ export default function LoginPage() {
             >
               {loading ? 'Logging in...' : 'Login'}
             </button>
-            {error && <p className="mt-2 text-red-400">{error}</p>}
+            {error && <p className="mt-2 text-center text-red-400">{error}</p>}
           </div>
         </form>
 
